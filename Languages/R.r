@@ -13,7 +13,7 @@
 # 2. Basic DataTypes
 # 3. File Reading Commands
 # 4. Data Frames
-# 5. ggplot
+# 5. Plotting
 
 
 #**************************************
@@ -106,3 +106,22 @@ sort(dataFrame$var, descending)			#params DataFrame, bool(opt)
 sort(dataFrame$var, na.last)			#Note: descending: If True, sorts in descending order
 										# 	   na.last:		Pushes all NAs at end of list
 
+#**************************************
+#   Plotting
+#**************************************
+
+#Commands                               #Description
+
+#Required Lib: 'ggplot2'
+#Basics of qplot
+qplot(xLabel, yLabel, dataFrame)		#Plots a graph of provided dataFrame
+qplot(xLabel, yLabel, dataFrame, color) #params: string, string, dataFrame, color (opt), geom (opt)
+qplot(xLabel, yLabel, dataFrame, geom)	#Note: 'color' is colour asthetics of plot
+										#		'geom' collection object to draw path
+
+
+#Required Lib: 'lattice'
+#Basics of lattice plot
+xyplot(xVar ~ yVar, dataFrame)			#Plots a simple scatter plot of dataFrame
+										#params: string ~ string, dataFrame
+										
